@@ -1,6 +1,13 @@
+# A method to reverse each word in a sentence, in place.
+# def reverse_sentence(sentence)
+#   string_reverse(sentence)
+#   reverse_words(sentence)
+# end
+
 def reverse_words(sentence)
   return nil if sentence == nil || sentence.length == 0
 
+  length = sentence.length
   word_start = 0
   word_end = 0
   i = 0
@@ -14,6 +21,7 @@ def reverse_words(sentence)
     end
 
     i = word_start
+
     word_end = word_start
 
     until sentence[i] == " " || i == sentence.length
@@ -30,6 +38,8 @@ def reverse_words(sentence)
 end
 
 def string_reverse(my_string)
+  # return nil if my_string == nil || my_string.length == 0
+
   return my_string if my_string.length == 1
 
   idx_alpha = 0
@@ -44,3 +54,8 @@ def string_reverse(my_string)
   end
   return my_string
 end
+
+# # driver code
+my_sentence = "The boy"
+puts reverse_words(my_sentence)
+# puts reverse_sentence(my_sentence)
