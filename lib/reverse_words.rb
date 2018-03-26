@@ -4,7 +4,6 @@ def reverse_words(sentence)
   word_start = 0
   word_end = 0
   i = 0
-  j = 0
 
   while i < sentence.length - 1
 
